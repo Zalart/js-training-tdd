@@ -8,13 +8,22 @@
  */
 
 // Your code:
+function getFirst(s) {
 
+    if (Array.isArray(s)) {
+        return s[0];
+    }
+    else {
+        let sArray = s.split('');
+        return sArray[0];
+    }
+}
 //* Begin of tests
 const assert = require('assert');
 
-assert.strictEqual(getFirst([ 2, 42 ]), 2);
-assert.strictEqual(getFirst([ 'pouet', 4, true ]), 'pouet');
-assert.strictEqual(getFirst([ getFirst ]), getFirst);
+assert.strictEqual(getFirst([2, 42]), 2);
+assert.strictEqual(getFirst(['pouet', 4, true]), 'pouet');
+assert.strictEqual(getFirst([getFirst]), getFirst);
 assert.strictEqual(getFirst('salut'), 's');
 assert.strictEqual(getFirst([]), undefined);
 // End of tests */
