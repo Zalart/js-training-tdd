@@ -8,7 +8,10 @@
  */
 
 // Your code:
-
+function isPositive(num) {
+    const returnBool = num > 0 ? true : false;
+    return returnBool;
+}
 //* Begin of tests
 const assert = require('assert');
 
