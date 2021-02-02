@@ -13,9 +13,19 @@
  */
 
 // Your code:
-
+const keepFirst = (str) => str.substring(0, 2)
+const keepLast = (str) => str.substring(str.length - 2)
+const keepFirstLast = (str) => str.substring(2, 2 + 2)
 //* Begin of tests
 const assert = require('assert');
-
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof keepFirst, 'function');
+assert.strictEqual(typeof keepLast, 'function');
+assert.strictEqual(typeof keepFirstLast, 'function');
+assert.strictEqual(keepFirst.length, 1);
+assert.strictEqual(keepLast.length, 1);
+assert.strictEqual(keepFirstLast.length, 1);
+assert.strictEqual(keepFirst('Hello'), 'He');
+assert.strictEqual(keepLast('Hello'), 'lo');
+assert.strictEqual(keepFirstLast('Hello'), 'll');
+//assert.fail('You must write your own tests');
 // End of tests */
