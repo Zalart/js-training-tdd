@@ -9,6 +9,27 @@
  */
 
 // Your code:
+function multiply(n1, n2) {
+    let result = 0;
+    let i = n2;
+
+    if (n1 === 0 || n2 === 0) {
+        return result;
+    }
+    while (i !== 0) {
+        result += n1;
+        if (i > 0) {
+            i--;
+        } else {
+            i++;
+        }
+    }
+    if (n2 < 0) {
+        return -result;
+    } else {
+        return result;
+    }
+}
 
 //* Begin of tests
 const assert = require('assert');
@@ -25,4 +46,4 @@ assert.strictEqual(multiply(0, 0), 0);
 assert.strictEqual(multiply(123, -22), -2706);
 assert.strictEqual(multiply(-22, 123), -2706);
 assert.strictEqual(multiply(-22, -123), 2706);
-// End of tests */
+// End of tests
